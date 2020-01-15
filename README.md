@@ -12,11 +12,17 @@ I am quite happy with how this project turned out. I feel like this would be a h
 I have also included a few errors and debugging tools for the propositional logic generator. The main implementation of this is parentheses checking that makes sure that any inputted string has balanced parentheses. This way if an error is thrown the user will know this is because of a malformed input in their parentheses and know how to fix this. 
 
 The basic way to use this code is at the bottom of the script call an instantiation of the LogicSolver object. There are no needed inputs to the LogicSolver initialization, however you can pass your propositional logic string argument in at this point. If you wish to add additional propositional logic constraint strings, they can be added with the .add_string() method, then when the user wishes to get the output, they can they have many options:
+
 print(Instance Name) if inputted into the print function, it will state if it is satisfiable or unsatisfiable
+
 .returnSolver() returns the actual Z3 solver for Z3 functionality
+
 .count_model() counts the number of possible solutions *generally grows exponentially for the number of variables (can be slow)
+
 .print_options() prints all of possible solution combinations *generally grows exponentially for the number of variables (can be slow)
+
 .isTautology() is true if the statements are a Tautology
+
 .print_options() allows user to select which variables to see if the logic equations constrain them to be true or false
 There are examples of these in the python script which are commented to show the various options for different scenarios.
 
